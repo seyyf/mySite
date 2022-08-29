@@ -10,6 +10,7 @@ import {
 import "./App.css";
 import Button from "./Components/Button";
 import AboutMe from "./Pages/AboutMe";
+import Experience from "./Pages/Experience";
 import Skills from "./Pages/Skills";
 
 function App() {
@@ -33,27 +34,27 @@ function App() {
                 MS
               </h1>
               <div className="flex gap-12">
-                <NavLink to="/" className="btn-menu" activeClassName="active">
+                <NavLink to="/" className="btn-menu" activeclassname="active">
                   About me
                 </NavLink>
                 <NavLink
                   to="/skills"
                   className="btn-menu"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Skills
                 </NavLink>
                 <NavLink
                   to="/experience"
                   className="btn-menu"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Experience
                 </NavLink>
                 <NavLink
                   to="/contact"
                   className="btn-menu"
-                  activeClassName="active-page"
+                  activeclassname="active-page"
                 >
                   Contact
                 </NavLink>
@@ -69,6 +70,7 @@ function App() {
           <Routes>
             <Route path="/" element={<AboutMe />}></Route>
             <Route path="/skills" element={<Skills />}></Route>
+            <Route path="/experience" element={<Experience />}></Route>
           </Routes>
           <div className="flex justify-center items-end">
             <h3 className="text-color-white">@copyright Mejri seyf 2022</h3>
