@@ -5,7 +5,8 @@ function Experience() {
     {
       title: "Front-end Developer",
       duration: "5 Months (internship)",
-      content: "lorem ipsum",
+      content:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
     },
     {
       title: "Front-end Developer",
@@ -24,14 +25,14 @@ function Experience() {
       <div className="w-[30%]">
         <img src={image} alt="" />
       </div>
-      <div>
+      <div className="flex flex-col justify-start ">
         {EXPERIENCE_DATA.map((data, key) => {
           return (
-            <>
-              <div key={key}>{data.title}</div>
-              <div key={key}>{data.duration}</div>
-              <div key={key}>{data.content}</div>
-            </>
+            <div key={key} className="pb-7 pr-6 text-color-white">
+              <h1 className=" text-2xl">{data.title}</h1>
+              <div className="text-mainColor">{data.duration}</div>
+              <div className="">{data.content}</div>
+            </div>
           );
         })}
       </div>
