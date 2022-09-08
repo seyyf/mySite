@@ -25,7 +25,7 @@ function AboutMe() {
       className="flex h-[80vh] justify-between"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: 0, transition: { duration: 1 } }}
     >
       <div className=" flex justify-center flex-col w-[70%]">
         <h1 className="text-6xl text-mainColor">{content.title}</h1>
