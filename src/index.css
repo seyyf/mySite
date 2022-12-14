@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  height: 100%;
+}
+
 body{
   background-color: #243C47;
   height: 100%;
@@ -16,4 +20,21 @@ body{
     @apply uppercase text-sm tracking-widest text-color-white cursor-pointer
          hover:text-mainColor hover:delay-200 delay-75 ease-in duration-150;
   }
+}
+
+.skill{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  justify-items: center;
+}
+
+.skill img:nth-child(2n+3){
+  animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {bottom: 20px;}
 }

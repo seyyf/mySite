@@ -18,7 +18,7 @@ function AboutMe() {
   const content = {
     title: "Hi There !",
     phrase:
-      "My Name is Seyf Mejri, I'm a Full-stack web Developer & Web Designer",
+      "My Name is Seyf Mejri, I'm a Front-end web Developer & Web Designer",
   };
   return (
     <motion.div

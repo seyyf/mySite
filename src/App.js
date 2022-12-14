@@ -11,9 +11,9 @@ function App() {
         <Navbar />
         <div className="px-4">
           <AnimatedRoutes />
-          <div className="flex justify-center items-end">
+          {/* <div className="flex justify-center items-end">
             <h3 className="text-color-white">@copyright Mejri seyf 2022</h3>
-          </div>
+          </div> */}
         </div>
       </Router>
     </div>
