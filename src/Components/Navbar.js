@@ -17,6 +17,28 @@ function Navbar() {
       url: "https://github.com/seyyf",
     },
   ];
+  const MENU = [
+    {
+      to: "/",
+      activeclassname: "active",
+      title: "about me",
+    },
+    {
+      to: "/skills",
+      activeclassname: "active",
+      title: "skills",
+    },
+    {
+      to: "/experience",
+      activeclassname: "active",
+      title: "experience",
+    },
+    {
+      to: "/contact",
+      activeclassname: "active-page",
+      title: "contact",
+    },
+  ];
   return (
     <div>
       <div className="p-4">
@@ -25,39 +47,32 @@ function Navbar() {
             <h1 className="text-6xl text-color-white font-['Sensations_and_Qualities']">
               MS
             </h1>
-            <div className="flex gap-12">
-              <NavLink to="/" className="btn-menu" activeclassname="active">
-                About me
-              </NavLink>
-              <NavLink
-                to="/skills"
-                className="btn-menu"
-                activeclassname="active"
-              >
-                Skills
-              </NavLink>
-              <NavLink
-                to="/experience"
-                className="btn-menu"
-                activeclassname="active"
-              >
-                Experience
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className="btn-menu"
-                activeclassname="active-page"
-              >
-                Contact
-              </NavLink>
+            <div className="flex gap-6">
+              {MENU.map((menu, idx) => {
+                return (
+                  <NavLink
+                    key={idx}
+                    to={menu.to}
+                    className="btn-menu"
+                    activeclassname={menu.activeclassname}
+                  >
+                    {menu.title.charAt(0).toUpperCase() + menu.title.slice(1)}
+                  </NavLink>
+                );
+              })}
             </div>
 
             <div className="flex gap-4">
-              {ICONS.map((data, key) => {
+              {ICONS.map((icon, index) => {
                 return (
-                  <a href={data.url} target="_blank" rel="noreferrer" key={key}>
+                  <a
+                    href={icon.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={index}
+                  >
                     <div className="text-color-white cursor-pointer text-[25px] hover:text-mainColor duration:200 ease-in">
-                      {data.icon}
+                      {icon.icon}
                     </div>
                   </a>
                 );
