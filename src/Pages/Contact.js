@@ -11,11 +11,11 @@ function Contact() {
           <Input type="number" id="Phone Number" />
           <Input type="email" id="Email" />
         </div>
-        <div className="w-full h-[80vh]">
+        <div className="w-full h-2/3 sm:h-full">
           <label htmlFor="" className="text-color-white leading-8">
             Your message
           </label>
-          <textarea className="border-2 border-color-white rounded-md p-2 indent-2 w-full h-full outline-none bg-color-transparent text-color-white" />
+          <textarea className="border-2 border-color-white rounded-md p-2 indent-2 w-full h-full outline-none bg-color-transparent text-color-white sm:h-[17rem]" />
         </div>
       </div>
       <div className="w-full flex justify-end">
